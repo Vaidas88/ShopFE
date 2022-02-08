@@ -1,0 +1,10 @@
+<h2 class="text-center mb-5 text-2xl subpixel-antialiased font-bold text-gray-800">Create a new shop</h2>
+<form>
+  <input [(ngModel)]="shopName" type="text" placeholder="Enter shop name..." name="shopName" class="w-3/4 px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:border-indigo-900" />
+  <button (click)="onSubmit()" type="submit" class="w-1/4 mx-auto border border-transparent bg-gray-400 hover:bg-gray-500 focus:bg-gray-500 text-white rounded-md py-2 font-semibold">Create</button>
+</form>
+<div *ngIf="error" class="my-3 border-2 border-rose-600 rounded-md bg-rose-200">
+  <h3 class="p-3 font-bold bg-rose-400 text-white">An error occured.</h3>
+  <p class="m-3">{{ error }}</p>
+  <p class="m-3 mt-0">Please try again.</p>
+</div>

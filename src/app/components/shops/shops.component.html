@@ -1,0 +1,23 @@
+<h2 class="text-center mb-5 text-2xl subpixel-antialiased font-bold text-gray-800">List of all available shops</h2>
+<table class="table-auto border mx-auto">
+  <thead>
+    <tr>
+      <th class="bg-gray-100 border px-4 py-2 text-center">Id</th>
+      <th class="bg-gray-100 border px-4 py-2">Name</th>
+      <th class="bg-gray-100 border px-4 py-2">Created</th>
+      <th class="bg-gray-100 border px-4 py-2">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let shop of shops">
+      <td class="border px-4 py-2 text-center">{{ shop.id }}</td>
+      <td class="border px-4 py-2">{{ shop.name }}</td>
+      <td class="border px-4 py-2">{{ shop.createdDate | date:'yyyy-MM-dd, HH:mm' }}</td>
+      <td class="border px-4 py-2">
+        <button (click)="onDelete(shop.id)"
+        class="border border-rose-600 bg-rose-500 hover:bg-rose-800 focus:bg-rose-600 text-white rounded-md py-1 px-2 font-semibold"
+        >Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
